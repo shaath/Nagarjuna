@@ -1,0 +1,21 @@
+package testNG;
+
+import java.io.FileInputStream;
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.BeforeSuite;
+
+public class TestNGMaster {
+	public WebDriver driver = null;
+	public String actRes,expRes;
+	public String url = "http://orangehrm.qedgetech.com/";    //Qedge123!@#
+	public FileInputStream fi = null;
+	public Properties p = null;
+	@BeforeSuite
+	public void orgLaunch()
+	{
+		
+	}
+	
+}

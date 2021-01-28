@@ -1,0 +1,13 @@
+package methods;
+
+public class OrgHRM_LoginTC {
+
+	public static void main(String[] args) {
+		
+		OrgMaster om = new OrgMaster();
+		
+		String res = om.orgLaunch(om.url);
+		 
+	}
+
+}

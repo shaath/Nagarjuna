@@ -1,0 +1,42 @@
+package testNG;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
+import org.testng.annotations.BeforeSuite;
+
+public class TestNGMaster {
+	public WebDriver driver = null;
+	public String actRes,expRes;
+	public String url = "http://orangehrm.qedgetech.com/";    //Qedge123!@#
+	public FileInputStream fi = null;
+	public Properties p = null;
+	@BeforeSuite
+	public void orgLaunch() throws IOException
+	{
+		fi = new FileInputStream("D:\\Nagarjuna\\Workspace\\SeleniumProoject\\src\\config\\OrgMaster.properties");
+		p = new Properties();
+		p.load(fi);
+		
+		expRes = "LOGIN";
+		System.setProperty("webdriver.gecko.driver", "D:\\Nagarjuna\\Jars/geckodriver.exe");
+		driver = new FirefoxDriver();
+
+		driver.get(url);
+		driver.manage().window().maximize();
+		
+		driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
+		
+		actRes = driver.findElement(By.id(p.getProperty("login"))).getAttribute("value");
+		
+		Assert.assertEquals(actRes, expRes, "Launch Failed");
+	}
+	
+}

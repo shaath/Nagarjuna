@@ -1,0 +1,21 @@
+package xlOps;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class ExcelOperations {
+
+	public static void main(String[] args) throws IOException {
+		String path = "D:\\Nagarjuna\\Workspace\\SeleniumProoject\\src\\testData\\TestData.xlsx";
+		
+		FileInputStream fi = new FileInputStream(path);
+		
+		XSSFWorkbook wb = new XSSFWorkbook(fi);
+		
+
+	}
+
+}

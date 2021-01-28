@@ -1,0 +1,12 @@
+package xlOps;
+
+public class ExcelOperations {
+
+	public static void main(String[] args) {
+		String path = "D:\\Nagarjuna\\Workspace\\SeleniumProoject\\src\\testData\\TestData.xlsx";
+		
+		
+
+	}
+
+}

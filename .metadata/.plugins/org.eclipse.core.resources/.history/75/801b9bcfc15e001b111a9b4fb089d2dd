@@ -1,0 +1,6 @@
+############# Login ###############
+
+#### Login element id property
+login = btnLogin
+username = txtUsername
+password = txtPassword

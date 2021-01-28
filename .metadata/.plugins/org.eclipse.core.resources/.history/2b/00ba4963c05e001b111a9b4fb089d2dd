@@ -1,0 +1,67 @@
+package methods;
+
+public class TestSuite {
+
+	public static void main(String[] args) throws InterruptedException {
+		OrgMaster om = new OrgMaster();
+		
+		//Login
+//		String res = om.orgLaunch(om.url);
+//		System.out.println("Application Launch "+res);
+//		
+//		res = om.orgLogin("Admin", "Qedge123!@#");
+//		System.out.println("Application Login "+res);
+//		
+//		res = om.orgLogout();
+//		System.out.println("Application Logout "+res);
+//		
+//		om.orgClose();
+//		System.out.println("Application Closed Successfully");
+
+		//EmployeeReg
+//		res = om.orgLaunch(om.url);
+//		System.out.println("Application Launch "+res);
+//		
+//		res = om.orgLogin("Admin", "Qedge123!@#");
+//		System.out.println("Application Login "+res);
+//		
+//		res = om.orgEmpReg("Nidish", "G", "NG8547");
+//		System.out.println("Employee Registration "+res);
+//		
+//		res = om.orgLogout();
+//		System.out.println("Application Logout "+res);
+//		
+//		om.orgClose();
+//		System.out.println("Application Closed Successfully");
+		
+		//User Reg
+		res = om.orgLaunch(om.url);
+		System.out.println("Application Launch "+res);
+		
+		res = om.orgLogin("Admin", "Qedge123!@#");
+		System.out.println("Application Login "+res);
+		
+		res = om.orgUserReg("Nidish G", "AANidishG", "AANidishG@1234567890", "AANidishG@1234567890");
+		System.out.println("User registration "+res);
+		
+		res = om.orgLogout();
+		System.out.println("Application Logout "+res);
+		
+		om.orgClose();
+		System.out.println("Application Closed Successfully");
+
+		//UserLogin
+		res = om.orgLaunch(om.url);
+		System.out.println("Application Launch "+res);
+		
+		res = om.orgLogin("AANidishG", "AANidishG@1234567890");
+		System.out.println("Application Login "+res);
+		
+		res = om.orgLogout();
+		System.out.println("Application Logout "+res);
+		
+		om.orgClose();
+		System.out.println("Application Closed Successfully");
+	}
+
+}
